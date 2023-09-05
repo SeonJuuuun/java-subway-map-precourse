@@ -1,6 +1,6 @@
 package subway.enums;
 
-public enum ControlSection {
+public enum ControlPath {
 
     REGISTER("1"),
     DELETE("2"),
@@ -8,7 +8,7 @@ public enum ControlSection {
 
     private final String index;
 
-    ControlSection(String index) {
+    ControlPath(String index) {
         this.index = index;
     }
 
