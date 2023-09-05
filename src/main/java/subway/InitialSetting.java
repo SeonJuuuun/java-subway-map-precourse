@@ -1,8 +1,10 @@
 package subway;
 
+import java.util.Collections;
 import java.util.List;
 import subway.domain.Line;
 import subway.domain.LineRepository;
+import subway.domain.Path;
 import subway.domain.Station;
 import subway.domain.StationRepository;
 
@@ -23,6 +25,7 @@ public class InitialSetting {
     public static void setting() {
         settingLines();
         settingStations();
+        settingPath();
     }
 
     private static void settingLines() {
@@ -36,6 +39,16 @@ public class InitialSetting {
         for(String stationName : STATIONS){
             Station station = new Station(stationName);
             StationRepository.addStation(station);
+        }
+    }
+
+    private static void settingPath() {
+        for (int i = 0; i < ADD_COUNT; i++) {
+            String lineName = LINES.get(i);
+            Line line = LineRepository.getLineByName(lineName);
+            List<String> pathStations = PATH.get(i);
+            List<Station> stationsOnPath = StationRepository.getStationsByName(pathStations);
+            new Path(line, stationsOnPath);
         }
     }
 }
