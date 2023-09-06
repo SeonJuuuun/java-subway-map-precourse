@@ -1,15 +1,15 @@
-package subway.domainController;
+package subway.controller;
 
 import java.util.Scanner;
 import subway.enums.Screen;
 import subway.view.InputView;
 import subway.view.OutputView;
 
-public class MapController {
+public class LineController {
 
     public static void run(Scanner scanner) {
-        OutputView.loadView(Screen.SUBWAY_MAP);
-        chooseFunction(InputView.getInputFunctionCode(Screen.SUBWAY_MAP, scanner), scanner);
+        OutputView.loadView(Screen.LINE);
+        chooseFunction(InputView.getInputFunctionCode(Screen.LINE, scanner), scanner);
     }
 
     private static void chooseFunction(String functionCode, Scanner scanner) {

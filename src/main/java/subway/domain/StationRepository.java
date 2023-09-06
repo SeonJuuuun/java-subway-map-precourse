@@ -26,4 +26,8 @@ public class StationRepository {
             .filter(station -> stationNames.contains(station.getName()))
             .collect(Collectors.toList());
     }
+
+    public static boolean validateExistStation(String name) {
+        return stations.stream().anyMatch(station -> station.getName().equals(name));
+    }
 }

@@ -1,4 +1,4 @@
-package subway.domainController;
+package subway.controller;
 
 import java.util.Scanner;
 import subway.enums.Screen;

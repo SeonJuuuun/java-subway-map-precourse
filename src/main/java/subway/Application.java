@@ -1,7 +1,7 @@
 package subway;
 
 import java.util.Scanner;
-import subway.domainController.ScreenController;
+import subway.controller.ScreenController;
 import subway.enums.Screen;
 
 public class Application {

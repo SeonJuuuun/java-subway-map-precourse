@@ -15,6 +15,18 @@ public class InputView {
         return functionCode;
     }
 
+    public static String inputRegisterStation(Scanner scanner) {
+        OutputView.printRegisterMessage();
+        String code = scanner.nextLine();
+        validateBlank(code);
+        return code;
+    }
+
+    public static String inputDeleteStation(Scanner scanner) {
+        OutputView.printDeleteMessage();
+        return scanner.nextLine();
+    }
+
     private static void validateInputFunctionCode(String functionCode, Screen screen) {
         validateBlank(functionCode);
         validateFunctionCode(functionCode, screen);
