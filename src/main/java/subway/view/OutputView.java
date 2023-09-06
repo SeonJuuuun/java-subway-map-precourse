@@ -12,6 +12,10 @@ public class OutputView {
     private OutputView() {
     }
 
+    public static void printMessage() {
+        System.out.println(START_MESSAGE + "원하는 기능을 선택하세요.");
+    }
+
     public static void loadView(Screen screen) {
         printEnter();
         printTitle(screen.getTitle());

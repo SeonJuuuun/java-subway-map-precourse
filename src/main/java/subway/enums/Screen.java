@@ -1,6 +1,7 @@
 package subway.enums;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public enum Screen {
 
@@ -30,5 +31,11 @@ public enum Screen {
 
     public List<String> getFunctions() {
         return functions;
+    }
+
+    public List<String> getFunctionCodes() {
+        return functions.stream()
+            .map(n -> n.substring(0, 1))
+            .collect(Collectors.toList());
     }
 }
