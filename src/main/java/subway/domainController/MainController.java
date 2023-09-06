@@ -18,18 +18,38 @@ public class MainController {
     }
 
     private static void shiftFunctionScreen(String functionIndex, Scanner scanner) {
+        stationFunction(functionIndex, scanner);
+        lineFunction(functionIndex, scanner);
+        pathFunction(functionIndex, scanner);
+        mapFunction(functionIndex, scanner);
+        quitFunction(functionIndex, scanner);
+    }
+
+    private static void stationFunction(String functionIndex, Scanner scanner) {
         if (functionIndex.equals(Screen.STATION.getIndex())) {
             ScreenController.run(Screen.STATION, scanner);
         }
+    }
+
+    private static void lineFunction(String functionIndex, Scanner scanner) {
         if (functionIndex.equals(Screen.LINE.getIndex())) {
             ScreenController.run(Screen.LINE, scanner);
         }
+    }
+
+    private static void pathFunction(String functionIndex, Scanner scanner) {
         if (functionIndex.equals(Screen.PATH.getIndex())) {
             ScreenController.run(Screen.PATH, scanner);
         }
+    }
+
+    private static void mapFunction(String functionIndex, Scanner scanner) {
         if (functionIndex.equals(Screen.SUBWAY_MAP.getIndex())) {
             ScreenController.run(Screen.SUBWAY_MAP, scanner);
         }
+    }
+
+    private static void quitFunction(String functionIndex, Scanner scanner) {
         if (functionIndex.equals(QUIT)) {
             quitProgram(scanner);
         }
